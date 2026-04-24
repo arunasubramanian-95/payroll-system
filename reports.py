@@ -23,10 +23,12 @@ def department_report():
             print("No reports found!")
             return
 
-        print("Department  |  Employees  |  Avg Salary")
-        print("----------------------------------------")
+        print("=" * 47)
+        print("|     Department     | Employees | Avg Salary |")
+        print("=" * 47)
         for row in result:
-            print(f"{row[0]:>12}  | {row[1]:>3}  |  {row[2]:>6}")
+            print(f"| {row[0]:<17}  | {row[1]:^8}  | {row[2]:>6.2f}   |")
+        print("=" * 47)
 
     except Exception as e:
         print(f"Error: {e}")
